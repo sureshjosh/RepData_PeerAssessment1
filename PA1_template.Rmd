@@ -142,7 +142,7 @@ sum(activity$steps, na.rm=T) - round(sum(activity_prime$steps))
 
 ```{r}
 suppressWarnings(activity_prime <- transform(activity_prime, 
-                weekday = factor(weekdays(as.Date(activity_prime$date)) %in% 
+                 weekday = factor(weekdays(as.Date(activity_prime$date)) %in% 
                                    c("Monday","Tuesday","Wednesday","Thursday","Friday"),
                                  levels = c(TRUE, FALSE),
                                  labels=c("weekdays","weekends"))))
